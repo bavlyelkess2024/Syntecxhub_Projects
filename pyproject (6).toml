@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntecxhub-secure-transfer"
+version = "1.0.0"
+description = "Encrypted file transfer and secure file storage (AES-GCM, HMAC, TLS)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["cryptography>=42.0"]
+
+[project.scripts]
+secure-transfer = "secure_transfer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["secure_transfer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

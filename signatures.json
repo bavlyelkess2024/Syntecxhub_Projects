@@ -1,0 +1,18 @@
+[
+  {
+    "product": "vsftpd",
+    "version": "2.3.4",
+    "cve": "CVE-2011-2523",
+    "severity": "CRITICAL",
+    "score": 9.8,
+    "description": "vsftpd 2.3.4 downloaded between 2011-06-30 and 2011-07-03 contains a backdoor that opens a shell on port 6200."
+  },
+  {
+    "product": "proftpd",
+    "version": "1.3.5",
+    "cve": "CVE-2015-3306",
+    "severity": "CRITICAL",
+    "score": 9.8,
+    "description": "The mod_copy module in ProFTPD 1.3.5 allows unauthenticated remote file read/write via SITE CPFR and SITE CPTO."
+  }
+]

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntecxhub-cve-scanner"
+version = "1.0.0"
+description = "Lightweight vulnerability / CVE scanner with banner grabbing and NVD lookups"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+dependencies = ["requests>=2.31"]
+
+[project.scripts]
+cve-scanner = "cve_scanner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cve_scanner*"]
+
+[tool.setuptools.package-data]
+cve_scanner = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
